@@ -188,5 +188,5 @@ void Ps3Controller::_connection_callback(void *object, uint8_t is_connected)
 }
 
 #if !defined(NO_GLOBAL_INSTANCES)
-Ps3Controller joy;
+Ps3Controller PS3;
 #endif

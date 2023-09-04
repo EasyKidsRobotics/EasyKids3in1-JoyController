@@ -55,21 +55,18 @@ void loop()
         delay(50);
 
         Serial.print("L_Analog_X=");
-        Serial.print(PS3_Lx());
+        Serial.print(PS3_LX());
         Serial.print(" ");
         Serial.print("L_Analog_Y=");
-        Serial.print(PS3_Ly());
+        Serial.print(PS3_LY());
         Serial.print(" ");
 
         Serial.print("R_Analog_X=");
-        Serial.print(PS3_Rx());
+        Serial.print(PS3_RX());
         Serial.print(" ");
         Serial.print("R_Analog_Y=");
-        Serial.print(PS3_Ry());
+        Serial.print(PS3_RY());
         Serial.println(" ");
         delay(50);
-    }
-    else{
-        ledFillColor(RED);
     }
 }

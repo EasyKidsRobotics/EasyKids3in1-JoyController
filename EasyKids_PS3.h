@@ -17,6 +17,7 @@ void showAddressLcd(){
   display.setTextSize(2);
   display.setTextColor(TFT_GREEN);
   display.print(address);
+  Serial.println(address);
 }
 // ------ JoyValue ------
 int PS3_Cross()
@@ -96,20 +97,24 @@ int PS3_PS()
 
 int PS3_LX()
 {
-  return PS3.data.analog.stick.lx;
+  int LX = map(PS3.data.analog.stick.lx, -127, 127, -100, 100);
+  return LX;
 }
 
 int PS3_LY()
 {
-  return PS3.data.analog.stick.ly;
+  int LY = map(PS3.data.analog.stick.ly, -127, 127, 100, -100);
+  return LY;
 }
 
 int PS3_RX()
 {
-  return PS3.data.analog.stick.rx;
+  int RX = map(PS3.data.analog.stick.rx, -127, 127, -100, 100);
+  return RX;
 }
 
 int PS3_RY()
 {
-  return PS3.data.analog.stick.ry;
+  int RY = map(PS3.data.analog.stick.ry, -127, 127, 100, -100);
+  return RY;
 }
